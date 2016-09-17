@@ -1,0 +1,147 @@
+* {
+	font-family: Tinos, 'arial';
+}
+
+body {
+	background: #fbd8e3;
+}
+
+.quote blockquote { font-size: 2em; }
+.author { text-align: right; font-size: 1.24em; font-style: italic; }
+.typed { color: #5daf53; }
+
+.btn-style-capsule {
+	border-radius: 200px;
+	background: #ed1973;
+	border: #fff solid 5px;
+	color: #fff;
+}
+.btn-style-capsule:hover {
+	box-shadow: #ed1973 0 0 10px;
+}
+
+.card {
+	border-radius: 5px;
+	margin: auto;
+	background: #eeeeee;
+	width: 80%;
+	min-width: 300px;
+	max-width: 700px;
+	padding: 20px;
+	box-shadow: 0px 0px 5px #7f7f7f;
+}
+
+.card header {
+	text-align: center;
+	font-size: 2em;
+}
+
+hr.fancy {
+	border-top: 1px solid #8c8b8b;
+	text-align: center;
+}
+hr.fancy:after {
+	content: '§';
+	display: inline-block;
+	position: relative;
+	top: -14px;
+	padding: 0 10px;
+	background: #f0f0f0;
+	color: #8c8b8b;
+	font-size: 18px;
+	-webkit-transform: rotate(60deg);
+	-moz-transform: rotate(60deg);
+	transform: rotate(60deg);
+}
+
+#logo {
+	width: 60%;
+    position: absolute;
+    max-width: 480px;
+    margin: auto;
+    top: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#logo img {
+	width: 100%;
+}
+#logo .tagline {
+	text-align: center;
+	line-height: 3em;
+}
+#logo.logo-play-appear.logo-play-appear-active, #logo.small {
+	width: 150px;
+	top: 20px;
+	transition: all 0.2s;
+}
+
+#count-down {
+	color: red;
+	font-size: 48px;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+#count-down span {
+	display: inline-block;
+}
+
+#start-button {
+	font-size: 2em;
+	position: fixed;
+	top: 75%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	transition: 0.5s all;
+}
+#start-button.hide {
+	top: 120%;
+	transition: 0.5s all;
+}
+
+.start-button-leave {
+ 	top: 50%;
+}
+
+.start-button-leave.start-button-leave-active {
+	top: 120% !important;
+	transition: top 500ms ease-in;
+}
+
+#score-card {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	transition: 0.5s all;
+}
+#score-card label, .#score-card span {
+	font-size: 1.5em;
+}
+#score-card span {
+	color: #ed1973;
+}
+.score-card-enter {
+	opacity: 0;
+}
+.score-card-enter.score-card-enter-active {
+	opacity: 1;
+	transition: top 500ms ease-in;
+}
+.score-card-appear {
+	opacity: 0;
+}
+.score-card-appear.score-card-appear-active {
+	opacity: 1;
+	transition: top 500ms ease-in;
+}
+
+#quote-card {
+	position: fixed;
+	top: 100px;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
