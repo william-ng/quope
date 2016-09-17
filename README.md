@@ -1,5 +1,4 @@
 # Quope
-----------
 Just a simple typing game to learn some famous quotes while practicing your typing skill.
 
 ## Prerequisities
