@@ -3,7 +3,7 @@
 }
 
 body {
-	background: #fbd8e3;
+	background: #fee04a;
 }
 
 .quote blockquote { font-size: 2em; }
@@ -12,12 +12,12 @@ body {
 
 .btn-style-capsule {
 	border-radius: 200px;
-	background: #ed1973;
+	background: #f15a29;
 	border: #fff solid 5px;
 	color: #fff;
 }
 .btn-style-capsule:hover {
-	box-shadow: #ed1973 0 0 10px;
+	box-shadow: #f15a29 0 0 10px;
 }
 
 .card {
@@ -66,9 +66,13 @@ hr.fancy:after {
 #logo img {
 	width: 100%;
 }
-#logo .tagline {
+.tagline {
 	text-align: center;
-	line-height: 3em;
+	line-height: 2em;
+	font-size: 2em;
+}
+.instruction {
+	text-align: center;
 }
 #logo.logo-play-appear.logo-play-appear-active, #logo.small {
 	width: 150px;
@@ -121,7 +125,7 @@ hr.fancy:after {
 	font-size: 1.5em;
 }
 #score-card span {
-	color: #ed1973;
+	color: #f15a29;
 }
 .score-card-enter {
 	opacity: 0;
@@ -145,3 +149,10 @@ hr.fancy:after {
 	transform: translateX(-50%);
 }
 
+@media only screen 
+and (max-width : 640px) 
+and (orientation : portrait) {
+	.tagline {
+		font-size: 1.25em;
+	}
+}

@@ -28,6 +28,7 @@ const Logo = (props) => {
 				<div id="logo">
 					<img src="./images/quope-v2.png" />
 					<div className="tagline">Type to Learn | Learn to Type</div>
+					<div className="instruction">Type and learn some inspiring quotes while enhancing your typing skills.</div>
 				</div>
 			);
 			break;
