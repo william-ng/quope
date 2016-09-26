@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node_modules/.bin/webpack-dev-server --content-base web/",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "node_modules/.bin/mocha --compilers js:babel-register --recursive ./testing/test.js",
     "webpack": "node_modules/.bin/webpack --watch"
   },
   "keywords": [],
@@ -31,6 +31,7 @@
     "react-dom": "^15.3.1",
     "react-motion": "^0.4.4",
     "react-redux": "^4.4.5",
+    "recharts": "^0.15.0",
     "redux": "^3.5.2",
     "redux-thunk": "^2.1.0",
     "superagent": "^2.2.0"

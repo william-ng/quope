@@ -2,6 +2,7 @@ import axios from 'axios';
 
 // ACTIONS
 export const START_GAME = 'START_GAME';
+export const NEXT_GAME = 'NEXT_GAME';
 export const GAME_READY = 'GAME_READY';
 export const PLAY_GAME = 'PLAY_GAME';
 export const FETCH_QUOTE = 'FETCH_QUOTE';
@@ -10,6 +11,7 @@ export const FETCH_QUOTE_FAILED = 'FETCH_QUOTE_FAILED';
 export const BURN_CHAR = 'BURN_CHAR';
 export const DONE_TYPING = 'DONE_TYPING';
 export const GET_STATS = 'GET_STATS';
+export const PUSH_HISTORY = 'PUSH_HISTORY';
 
 // STATUS
 export const GAME_STATUS = {
@@ -88,6 +90,21 @@ export function startGame() {
 		    .then(function() {
 		    	dispatch(gameReady());
 		    });
+	}
+}
+
+function pushHistory(game) {
+	return {
+		type: PUSH_HISTORY,
+		game: game
+	}
+}
+
+export function nextGame(game) {
+	return dispatch => {
+		dispatch(pushHistory(game));
+
+		dispatch(startGame());
 	}
 }
 

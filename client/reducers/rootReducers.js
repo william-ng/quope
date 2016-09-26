@@ -1,7 +1,7 @@
-import { FETCH_QUOTE, QUOTE_RECEIVED, FETCH_QUOTE_FAILED, BURN_CHAR, DONE_TYPING, GET_STATS, START_GAME, PLAY_GAME, GAME_READY } from '../actions/actions';
+import { FETCH_QUOTE, QUOTE_RECEIVED, FETCH_QUOTE_FAILED, BURN_CHAR, DONE_TYPING, GET_STATS, START_GAME, PLAY_GAME, GAME_READY, PUSH_HISTORY } from '../actions/actions';
 import { GAME_STATUS } from '../actions/actions';
 import { combineReducers } from 'redux';
-//import _ from 'lodash';
+import _ from 'lodash';
 
 export const initState = {
 	game: {
@@ -100,6 +100,11 @@ function game(state = {}, action) {
 				{
 					quote: quote(state.quote, action),
 					play_quote: action.quote,
+					stats: {
+						speed: 0,
+						accuracy: 0,
+						score: 0
+					},
 					status: GAME_STATUS.READY
 				}
 			);
@@ -163,6 +168,11 @@ function settings(state = {}, action) {
 }
 
 function history(state = [], action) {
+	switch(action.type) {
+		case PUSH_HISTORY:
+			return [...state, _.cloneDeep(action.game)];
+		break;
+	}
 	return state;
 }
 

@@ -11,7 +11,7 @@ class App extends React.Component {
 	}
 
 	render() {
-		const stats = (this.props.game.status == GAME_STATUS.FINISHED) ? (<ScoreCard stats={this.props.game.stats} startGame={this.props.startGame} />) : ''; 
+		const stats = (this.props.game.status == GAME_STATUS.FINISHED) ? (<ScoreCard stats={this.props.game.stats} history={this.props.history} game={this.props.game} nextGame={this.props.nextGame} />) : ''; 
 
 		return (
 			<div id="game-space" className="container">

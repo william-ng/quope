@@ -21,7 +21,9 @@ class Quote extends React.Component {
 	}
 
 	onKeyPress(e) {
-		this.props.pressKey(e.key);
+		if(this.props.game.status == GAME_STATUS.PLAY) {
+			this.props.pressKey(e.key);
+		}
 	}
 
 	finishedCountdown() {

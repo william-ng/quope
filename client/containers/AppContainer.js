@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { startGame, playGame, burnChar, doneTyping } from '../actions/actions';
+import { startGame, playGame, burnChar, doneTyping, nextGame } from '../actions/actions';
 import App from '../components/App';
 
 const mapStateToProps = (state) => {
@@ -15,7 +15,8 @@ const mapDispatchToProps = (dispatch) => {
 		startGame: () => { dispatch(startGame()) },
 		playGame: () => { dispatch(playGame()) },
 		pressKey: (k) => { dispatch(burnChar(k)) },
-		doneTyping: () => { dispatch(doneTyping()) }
+		doneTyping: () => { dispatch(doneTyping()) },
+		nextGame: (g) => {dispatch(nextGame(g)) }
 	}
 }
 
