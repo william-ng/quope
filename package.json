@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node_modules/.bin/webpack-dev-server --content-base web/",
+    "start": "node_modules/.bin/webpack-dev-server --content-base docs/",
     "test": "node_modules/.bin/mocha --compilers js:babel-register --recursive ./testing/test.js",
     "webpack": "node_modules/.bin/webpack --watch"
   },
